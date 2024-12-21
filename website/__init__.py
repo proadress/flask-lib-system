@@ -7,7 +7,7 @@ from flask_cors import CORS
 def create_app():
     app = Flask(__name__)
     app.config["SECRET_KEY"] = "ytfyfyt wajhfjawf"
-    CORS(app, resources={r"/*": {"origins": "https://starter-flask-api.vercel.app/"}})
+    CORS(app, resources={r"/*": {"origins": "https://flask-lib-system.vercel.app/"}})
 
     from .views import views
     from .auth import auth
