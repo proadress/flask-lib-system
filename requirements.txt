@@ -1,0 +1,7 @@
+asgiref
+flask
+flask-login
+Werkzeug
+pymongo
+Flask-CORS
+python-dotenv

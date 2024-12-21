@@ -1,0 +1,37 @@
+{% extends "master.html" %}
+{% block title %}Programmer emulator{% endblock %}
+{%block style%}
+
+{%endblock%}
+{%block content%}
+
+<section class="section">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h1 class="card-title">Programmer emulator</h1>
+        </div>
+        <div class="card-body">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="switch1">
+            <label class="form-check-label" for="flexSwitchCheckDefault">I am a Programmer</label>
+          </div>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="switch2">
+            <label class="form-check-label" for="flexSwitchCheckDefault">I have more than one friend</label>
+          </div>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="switch3">
+            <label class="form-check-label" for="flexSwitchCheckDefault">I eat & sleep everyday</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%endblock%}
+{%block js%}
+<script type="module" src="{{ url_for('static',filename='emulator.js') }}"></script>
+{%endblock%}

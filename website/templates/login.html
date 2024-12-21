@@ -1,0 +1,80 @@
+{% extends "master.html" %}
+{% block title %}login{% endblock %}
+{% block style %}
+<style>
+  .form-signin {
+    max-width: 330px;
+    padding: 1rem;
+  }
+
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+
+  .form-signin input[type="text"] {
+    margin-bottom: -1px;
+    margin-top: 20px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .form-floating input:focus+label,
+  .form-floating input:not(:placeholder-shown)+label {
+    margin-top: -5px;
+    /* 這裡的值應與上面相同，保持一致 */
+  }
+</style>
+{% endblock %}
+{%block content%}
+<div class="form-signin w-100 m-auto">
+  <form class="p-4 border rounded-5" id="loginForm">
+    <h1 class="h1 mb-3 fw-bold text-center">Login</h1>
+    <!-- 警告 -->
+    <div>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages%}
+      {%for category,message in messages %}
+      {%if category=='error' %}
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{ message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {%else%}
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {%endif%}
+      {%endfor %}
+      {% endif %}
+      {%endwith%}
+    </div>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingInput" name="sid" placeholder="01xxxxxx" />
+      <label for="floatingInput">Student ID</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password" />
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <div class="form-check text-start my-3">
+      <input class="form-check-input" type="checkbox" name="rememberme" id="flexCheckDefault" />
+      <label class="form-check-label" for="flexCheckDefault">
+        Remember me
+      </label>
+    </div>
+    <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+  </form>
+</div>
+{%endblock%}
+{% block js %}
+<script type="module" src="{{ url_for('static',filename='login.js') }}"></script>
+{%endblock%}

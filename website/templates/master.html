@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Dashboard - Mazer Admin Dashboard{% endblock %}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/css/app.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/css/app-dark.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/css/iconly.css" />
+  {%block style%}{%endblock%}
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/static/js/initTheme.js"></script>
+  <!-- Start content here -->
+  <div id="app">
+    <div id="sidebar">{% include "sidebar.html" %}</div>
+    <div id="main" class="layout-navbar navbar-fixed">
+      {% include "navbar.html" %}
+      <div id="main-content">
+        <div id="error"></div>
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+  </div>
+  <!-- End content -->
+  <script src="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/static/js/components/dark.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/js/app.js"></script>
+  <script type="module" src="{{ url_for('static',filename='/master.js') }}"></script>
+
+  <!-- Need: Apexcharts -->
+  <!-- <script src="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/extensions/apexcharts/apexcharts.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/static/js/pages/dashboard.js"></script> -->
+  {% block js %}{% endblock %}
+</body>
+
+</html>

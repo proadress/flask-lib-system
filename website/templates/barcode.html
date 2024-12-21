@@ -1,0 +1,28 @@
+{% extends "master.html" %}
+{% block title %}barcode{% endblock %}
+{% block style %}
+<style>
+  video {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+{%endblock %}
+{%block content%}
+<div class="col-md-6 col-sm-12">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-body">
+        {% include "scanner.html" %}
+        {% include "bookTable.html" %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{%endblock%}
+{%block js%}
+<script type="module" src="https://unpkg.com/@zxing/library@latest"></script>
+<script type="module" src="{{ url_for('static',filename='scanner.js') }}"></script>
+<script type="module" src="{{ url_for('static',filename='barcode.js') }}"></script>
+{%endblock%}

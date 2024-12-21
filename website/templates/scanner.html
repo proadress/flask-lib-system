@@ -1,0 +1,21 @@
+<h4 class="card-title">輸入條碼</h4>
+<div class="container" id="demo-content" hidden>
+    <div id="sourceSelectPanel">
+        <label for="sourceSelect">Change video source:</label>
+        <select id="sourceSelect" style="max-width: 400px"></select>
+    </div>
+    <video id="video"></video>
+</div>
+<div class="col-md-8">
+    <div class="form-group has-icon-left">
+        <div class="position-relative">
+            <input type="text" class="form-control" placeholder="Barcode" id="barcodeInput" value="C110023">
+            <div class="form-control-icon">
+                <i class="bi bi-upc-scan"></i>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-light-success" id="submitButton">Submit</button>
+    <button class="btn btn-light-primary" id="scaneButton">Scane</button>
+    <button class="btn btn-light-secondary" id="stopButton" hidden>Stop</button>
+</div>

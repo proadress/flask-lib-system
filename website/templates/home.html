@@ -1,0 +1,67 @@
+{% extends "master.html" %}
+{% block title %}home{% endblock %} 
+{%block content%}
+<section id="content-types">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-body">
+                        <h4 class="card-title">【新服務登場】圖書館於電綜大樓增設智取櫃,112年11月1日起試營運囉！</h4>
+                        <p class="card-text">
+                            <br>
+                            圖書館智取櫃-電綜大樓(地點在電綜大樓1樓大廳右側,黃色櫃體) 自112/11/1起至11/30試營運囉！<br>
+                            <br>
+                            除了原本圖書館一樓藝文中心旁的智取櫃(藍色)已上線多年外，自11/1日起新增服務地點-電綜大樓(黃色)！<br>
+                            <br>
+                            目前提供三種服務:<br>
+                            <br>
+                            全國文獻傳遞服務系統(NDDS)-複印件<br>
+                            北聯大圖書資源共享平台-借書件<br>
+                            介購圖書-借書件(工學院&電機資訊學院限定)<br>
+                            <br>
+                            ⇒注意：不開放還書服務，還書時請親至圖書館總館辦理！<br>
+                            <br>
+                            說明如下:......
+                        </p>
+                        <button class="btn btn-light-primary">Read More</button>
+                        <br>
+                        <br>
+                        <small class="text-muted">Last updated 3 mins ago.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-body">
+                        <h4 class="card-title">【新消息】圖書館精進與創新競賽</h4>
+                        <p class="card-text">
+                            <br>
+                            報名可至右上角點選報名表單(手機、平板用戶請點左上角選單)，亦可點此連結。<br>
+                            <br>
+                            活動目的:<br>
+                            為鼓勵學生組隊參與發想本校圖書館之精進與創新發展，特辦理此競賽活動，競賽主題以「精進與創新」為主軸，以積極面對智慧圖書館的挑戰為提案，期能發揮團隊的想像力與創造力，提出精進與創新性之企劃，本競賽以本校圖書館各項業務（資訊徵集、資訊組織、閱讀、推廣等）為範圍。
+                            <br><br>
+                            參賽對象:<br>
+                            本校在學學生，每人僅能擇單一組別參賽，且每位參賽者限報名一隊，可跨系(所)或跨年級組隊參加，每隊人數1~3名。<br>
+                            <br>
+                            本競賽分「概念組」、「實作組」二組比賽，每隊僅能擇一組參加， 須選定隊長一名。<br>
+                            <br>
+                            說明如下:......
+                        </p>
+                        <button class="btn btn-light-primary">Read More</button>
+                        <br>
+                        <br>
+                        <small class="text-muted">Last updated 3 mins ago.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{%endblock%}
+{%block js%}
+<script type="module" src="{{ url_for('static',filename='home.js') }}"></script>
+{%endblock%}

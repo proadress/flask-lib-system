@@ -1,0 +1,20 @@
+{% extends "master.html" %}
+{% block title %}door{% endblock %} 
+{% block style %}
+<style>
+  .white {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+  }
+</style>
+{% endblock %}
+{%block content%}
+<div class="white" id="result"></div>
+{%endblock%}
+{%block js%}
+<script type="text/javascript" src="https://unpkg.com/@zxing/library@latest"></script>
+<script type="module" src="{{ url_for('static',filename='door.js') }}"></script>
+{%endblock%}
