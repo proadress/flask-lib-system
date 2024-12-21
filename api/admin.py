@@ -7,7 +7,7 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from website.models import user_db
+from api.models import user_db
 
 
 admin = Blueprint("admin", __name__)
