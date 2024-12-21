@@ -18,8 +18,8 @@ CORS(app, resources={r"/*": {"origins": "https://flask-lib-system.vercel.app/"}}
 
 
 app.register_blueprint(views, url_prefix="/")
-app.register_blueprint(auth, url_prefix="/")
-app.register_blueprint(admin, url_prefix="/admin")
+# app.register_blueprint(auth, url_prefix="/")
+# app.register_blueprint(admin, url_prefix="/admin")
 
 login_manager = LoginManager()
 login_manager.login_view = "auth.login"
