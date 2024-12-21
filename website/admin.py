@@ -1,8 +1,13 @@
 from flask import Blueprint, render_template, request, redirect, url_for
 from datetime import datetime
-from .models import user_db
 from werkzeug.security import generate_password_hash
 from flask_login import login_required, current_user
+
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from website.models import user_db
 
 
 admin = Blueprint("admin", __name__)

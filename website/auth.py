@@ -1,7 +1,10 @@
 from flask import Blueprint, render_template, request, redirect, url_for
 from flask_login import login_user, login_required, logout_user
-from .models import User, user_db
 from werkzeug.security import check_password_hash
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from .models import User, user_db
 
 
 auth = Blueprint("auth", __name__)
